@@ -1,0 +1,24 @@
+<!-- <h1 *ngFor='let product of this.productService.products'>{{product.name}}</h1> -->
+<div class="container-fluid px-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th >Nombre</th>
+            <th (click)="this.orderByPrice()">Precio</th>
+            <th >Stock</th>
+            <th >Palabras clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of this.productService.products">
+            <th>{{product.name}}</th>
+            <td>{{product.price}}</td>
+            <td>{{product.stock}}</td>
+            <td>
+                <span class="text-primary" *ngFor="let keyword of product.keywords">{{'#' + keyword + ' '}}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>

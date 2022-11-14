@@ -1,0 +1,15 @@
+<div class="w-100 mt-5 d-flex justify-content-center ">
+<form class="border p-3 rounded shadow w-50">
+    <h2 class="text-center mb-2">Iniciar Sesión</h2>
+    <div class="mb-3 ">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Ingresar email</div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="this.login()">Ingresar</button>
+  </form>
+</div>
